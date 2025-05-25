@@ -1,1 +1,0 @@
-# krzysztofprz.github.io
