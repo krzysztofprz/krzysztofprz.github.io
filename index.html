@@ -1,108 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online CV - Krzysztof Przyłuski</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Online CV - Kris Przyluski</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; }
-        h1, h2, h3 { color: #333; }
-        .section { margin-bottom: 30px; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+            display: flex;
+            gap: 40px;
+        }
+
+        /* Lewa kolumna */
+        .left-column {
+            flex: 0 0 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .left-column img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-details,
+        .interests,
+        .languages {
+            width: 100%;
+        }
+
+        .contact-details p,
+        .interests p,
+        .languages p {
+            margin: 6px 0;
+        }
+
+        .contact-details a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .fa {
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        /* Kolory ikon */
+        .fa-map-marker-alt {
+            color: #e74c3c;
+            /* czerwony */
+        }
+
+        .fa-envelope {
+            color: #3498db;
+            /* niebieski */
+        }
+
+        .fa-phone {
+            color: #2ecc71;
+            /* zielony */
+        }
+
+        .fa-github {
+            color: #333;
+            /* ciemny */
+        }
+
+        .fa-dumbbell {
+            color: #e67e22;
+            /* pomarańczowy */
+        }
+
+        .fa-book {
+            color: #2980b9;
+            /* niebieski */
+        }
+
+        .fa-chess {
+            color: #8e44ad;
+            /* fioletowy */
+        }
+
+        /* Prawa kolumna */
+        .right-column {
+            flex: 1;
+            max-width: 700px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        ul.projects {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.projects>li {
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .project-tech {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+        }
     </style>
 </head>
+
 <body>
-    <h1>Krzysztof Przyłuski</h1>
-    <h2>Senior Software Engineer</h2>
-    <p>📍 Kraków, Poland<br>
-       📧 <a href="mailto:krzysztofprz@gmail.com">krzysztofprz@gmail.com</a><br>
-       📞 +48 880 376 350</p>
-    
-    <div class="section">
-        <h3>About Me</h3>
-        <p>I am an experienced software engineer specializing in .NET technologies and distributed system architecture. I possess solid skills in designing, implementing, and maintaining web and backend applications. My interests include software architecture, security, and automation. I enjoy sharing knowledge – I regularly give presentations and publish technical articles.</p>
+    <div class="left-column">
+        <img src="https://raw.githubusercontent.com/krzysztofprz/krzysztofprz.github.io/refs/heads/main/cv_foto.jpg"
+            alt="CV image" />
+
+        <div class="contact-details">
+            <h3>Contact Details</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Kraków, Poland</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:krzysztofprz@gmail.com">krzysztofprz@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> +48 880 376 350</p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/krzysztofprz" target="_blank"
+                    rel="noopener noreferrer">github.com/krzysztofprz</a></p>
+        </div>
+
+        <div class="interests">
+            <h3>Interests</h3>
+            <p>
+                <i class="fas fa-dumbbell"></i> Fitness<br />
+                <i class="fas fa-book"></i> Fantasy literature<br />
+                <i class="fas fa-chess"></i> Chess
+            </p>
+        </div>
+
+        <div class="languages">
+            <h3>Languages</h3>
+            <p>Polish – native<br />English – advanced</p>
+        </div>
     </div>
-    
-    <div class="section">
-        <h3>Skills</h3>
-        <ul>
-            <li><strong>Backend:</strong> .NET Framework & .NET Core, C#, Visual Basic, Web API, ADO.NET, Dapper, Entity Framework 6 & EF Core</li>
-            <li><strong>Frontend:</strong> Angular 6+, TypeScript, JavaScript (jQuery)</li>
-            <li><strong>Databases:</strong> MS SQL, PostgreSQL, MongoDB, Elasticsearch</li>
-            <li><strong>Cloud and DevOps:</strong> Azure Functions, Azure DevOps (CI/CD), Docker, Azure Service Bus</li>
-            <li><strong>Design:</strong> DDD, TDD, SOLID, Clean Code, Modular Monolith, Microservices</li>
-            <li><strong>Tools:</strong> Git Flow, Trunk-based development, Kibana, Grafana, Prometheus</li>
-            <li><strong>Other:</strong> Python, test automation, API documentation</li>
-        </ul>
-    </div>
-    
-    <div class="section">
-        <h3>Work Experience</h3>
-        <h4>Intellias</h4>
-        <p><strong>Senior .NET Developer</strong> (09.2022 – present)</p>
-        <ul>
-            <li>Integrating the internal payment system with third-party payment providers</li>
-            <li>Incident analysis and post-mortem creation</li>
-            <li>Code reviews</li>
-            <li>Published the article "Metrics collection in .NET using Prometheus" on bulldogjob.pl</li>
-            <li>Presented the topic "Possibilities of ChatGPT using the .NET platform" at an online conference</li>
-        </ul>
-        <p><strong>.NET Developer</strong> (08.2021 – 08.2022)</p>
-        <ul>
-            <li>Logs and metrics analysis (Kibana, Grafana)</li>
-            <li>System integrations and code benchmarking</li>
-            <li>Conducting interviews</li>
-            <li>Presented the topic "Coupling & Cohesion" at an online conference</li>
-        </ul>
-        
-        <h4>X-KOM</h4>
-        <p><strong>.NET Developer</strong> (09.2020 – 07.2021)</p>
-        <ul>
-            <li>Developing and maintaining an e-commerce platform</li>
-            <li>Refactoring and modularizing a monolithic application</li>
-            <li>Working with PostgreSQL and Elasticsearch databases</li>
-            <li>Participating in architectural decisions</li>
-        </ul>
-        
-        <h4>HSBC</h4>
-        <p><strong>Software Engineer</strong> (01.2020 – 08.2020)</p>
-        <ul>
-            <li>Developing new modules and refactoring existing code</li>
-            <li>Implementing complex business logic and unit testing</li>
-            <li>CI/CD configuration (Azure Pipelines)</li>
-            <li>Level 3 support</li>
-        </ul>
-        <p><strong>Junior .NET Developer</strong> (08.2018 – 12.2019)</p>
-        <ul>
-            <li>Maintaining and developing existing applications</li>
-            <li>Developing automated tests</li>
-            <li>Production support and issue resolution</li>
-        </ul>
-    </div>
-    
-    <div class="section">
-        <h3>Education</h3>
-        <p>Cracow University of Technology, Master of Science (Transport), 10.2011 – 06.2016</p>
-    </div>
-    
-    <div class="section">
-        <h3>Courses and Certifications</h3>
-        <ul>
-            <li>AZ-204: Implement Azure Functions</li>
-            <li>Domain-Driven Design Fundamentals (Pluralsight)</li>
-            <li>Learn Rust by Building Real Applications (Udemy)</li>
-            <li>Building and Running Your First Docker App (Pluralsight)</li>
-            <li>Unit Testing in Angular 12 (Pluralsight)</li>
-        </ul>
-    </div>
-    
-    <div class="section">
-        <h3>Interests</h3>
-        <p>Fitness | Fantasy literature | Chess</p>
-    </div>
-    
-    <div class="section">
-        <h3>Languages</h3>
-        <p>Polish – native, English – advanced</p>
+
+    <div class="right-column">
+        <h1>Krzysztof Przyłuski</h1>
+        <h2>Senior Software Engineer</h2>
+
+        <div class="section">
+            <h3>About Me</h3>
+            <p>I am an experienced software engineer specializing in .NET technologies and distributed system
+                architecture. I possess solid skills in designing, implementing, and maintaining web and backend
+                applications. My interests include software architecture, security, and automation. I enjoy sharing
+                knowledge – I regularly give presentations and publish technical articles.</p>
+        </div>
+
+        <div class="section">
+            <h3>Skills</h3>
+            <ul>
+                <li><strong>Backend:</strong> .NET, C#, Visual Basic, Web API, ADO.NET, Dapper, Entity Framework</li>
+                <li><strong>Frontend:</strong> Angular 6+, TypeScript, JavaScript (jQuery)</li>
+                <li><strong>Databases:</strong> MS SQL, PostgreSQL, MongoDB, Elasticsearch</li>
+                <li><strong>Cloud and DevOps:</strong> Azure Functions, Azure DevOps (CI/CD), Docker, Azure Service Bus
+                </li>
+                <li><strong>Design:</strong> DDD, TDD, SOLID, Clean Code, Modular Monolith, Microservices</li>
+                <li><strong>Tools:</strong> Git, Kibana, Grafana, Prometheus</li>
+                <li><strong>Other:</strong> Python, Test Automation, API documentation, Trunk-based development</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Work Experience</h3>
+            <ul>
+                <li><strong>Alten</strong> (10.2024 – present)</li>
+                <li><strong>Intellias</strong> (09.2022 – 09.2024)</li>
+                <li><strong>x-kom</strong> (09.2020 – 07.2021)</li>
+                <li><strong>Mindbox</strong> (08.2018 – 08.2020)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Projects</h3>
+            <ul class="projects">
+                <li>
+                    <div class="project-title">Internal Payment System Integration</div>
+                    <div>Integration of the company's internal payment system with various third-party payment
+                        providers.</div>
+                    <div class="project-tech">Technologies: .NET, REST APIs, Azure Service Bus, Docker</div>
+                </li>
+                <li>
+                    <div class="project-title">E-commerce Platform Development</div>
+                    <div>Development and maintenance of a large-scale e-commerce platform with focus on scalability and
+                        modularization.</div>
+                    <div class="project-tech">Technologies: .NET, PostgreSQL, Elasticsearch, Angular</div>
+                </li>
+                <li>
+                    <div class="project-title">Metrics Collection System</div>
+                    <div>Implemented metrics collection in .NET applications using Prometheus for monitoring performance
+                        and
+                        health.</div>
+                    <div class="project-tech">Technologies: .NET, Prometheus, Grafana</div>
+                </li>
+                <li>
+                    <div class="project-title">ChatGPT Possibilities Presentation</div>
+                    <div>Prepared and presented a talk about integrating ChatGPT with the .NET platform.</div>
+                    <div class="project-tech">Technologies: .NET, AI, Presentation Tools</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Publications and Talks</h3>
+            <ul>
+                <li>Presented the topic <em>“ChatGPT Possibilities Presentation”</em> at an online conference.</li>
+                <li>Published the article <em>“Metrics collection in .NET using Prometheus”</em> on bulldogjob.pl.</li>
+                <li>Presented the topic <em>“Coupling & Cohesion”</em> at an online conference.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Education</h3>
+            <p>Cracow University of Technology, Master of Science (Transport), 10.2011 – 06.2016</p>
+        </div>
+
+        <div class="section">
+            <h3>Courses and Certifications</h3>
+            <ul>
+                <li>AZ-204: Implement Azure Functions</li>
+                <li>Domain-Driven Design Fundamentals (Pluralsight)</li>
+                <li>Learn Rust by Building Real Applications (Udemy)</li>
+                <li>Building and Running Your First Docker App (Pluralsight)</li>
+                <li>Unit Testing in Angular 12 (Pluralsight)</li>
+            </ul>
+        </div>
     </div>
 </body>
+
 </html>
