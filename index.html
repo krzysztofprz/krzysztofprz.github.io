@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Online CV - Kris Przyluski</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
     <style>
+        /* Reset some defaults */
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f8f8f8 0%, #dcdcdc 100%);
+            font-family: 'Ubuntu', Arial, sans-serif;
             line-height: 1.6;
             max-width: 1000px;
             margin: 40px auto;
@@ -16,9 +23,10 @@
             color: #333;
             display: flex;
             gap: 40px;
+            text-align: justify;
+            /* Dodano wyrównanie */
         }
 
-        /* Lewa kolumna */
         .left-column {
             flex: 0 0 280px;
             display: flex;
@@ -59,46 +67,39 @@
             vertical-align: middle;
         }
 
-        /* Kolory ikon */
         .fa-map-marker-alt {
             color: #e74c3c;
-            /* czerwony */
         }
 
         .fa-envelope {
             color: #3498db;
-            /* niebieski */
         }
 
         .fa-phone {
             color: #2ecc71;
-            /* zielony */
         }
 
         .fa-github {
             color: #333;
-            /* ciemny */
         }
 
         .fa-dumbbell {
             color: #e67e22;
-            /* pomarańczowy */
         }
 
         .fa-book {
             color: #2980b9;
-            /* niebieski */
         }
 
         .fa-chess {
             color: #8e44ad;
-            /* fioletowy */
         }
 
-        /* Prawa kolumna */
         .right-column {
             flex: 1;
             max-width: 700px;
+            text-align: justify;
+            /* Dodano wyrównanie */
         }
 
         h1,
@@ -110,6 +111,12 @@
 
         .section {
             margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .section:last-child {
+            border-bottom: none;
         }
 
         ul.projects {
@@ -131,6 +138,68 @@
             font-style: italic;
             color: #555;
             margin-top: 5px;
+        }
+
+        .icon-backend {
+            color: #3498db;
+        }
+
+        .icon-frontend {
+            color: #e67e22;
+        }
+
+        .icon-database {
+            color: #2ecc71;
+        }
+
+        .icon-cloud {
+            color: #9b59b6;
+        }
+
+        .icon-design {
+            color: #e74c3c;
+        }
+
+        .icon-tools {
+            color: #f1c40f;
+        }
+
+        .icon-other {
+            color: #34495e;
+        }
+
+        .languages img {
+            vertical-align: middle;
+            margin-right: 5px;
+            width: 24px;
+            height: 16px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                max-width: 100%;
+                margin: 20px 10px;
+                padding: 0 10px;
+            }
+
+            .left-column {
+                flex: none;
+                width: 100%;
+                align-items: flex-start;
+                gap: 20px;
+                margin-bottom: 30px;
+            }
+
+            .left-column img {
+                display: none;
+            }
+
+            .right-column {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -160,7 +229,9 @@
 
         <div class="languages">
             <h3>Languages</h3>
-            <p>Polish – native<br />English – advanced</p>
+            <p><img src="https://flagcdn.com/w20/pl.png" alt="Polish flag"> Polish – native<br />
+                <img src="https://flagcdn.com/w20/gb.png" alt="UK flag"> English – advanced
+            </p>
         </div>
     </div>
 
@@ -170,23 +241,40 @@
 
         <div class="section">
             <h3>About Me</h3>
-            <p>I am an experienced software engineer specializing in .NET technologies and distributed system
-                architecture. I possess solid skills in designing, implementing, and maintaining web and backend
-                applications. My interests include software architecture, security, and automation. I enjoy sharing
-                knowledge – I regularly give presentations and publish technical articles.</p>
+            <p>
+                I am an experienced software engineer specializing in .NET and Cloud technologies. I possess solid
+                skills in designing, implementing, and maintaining web and backend applications in distributed system
+                architecture as well as monolithic architecture. My interests include new technologies, security, and
+                automation. I enjoy sharing knowledge – I give presentations and publish technical articles. I
+                pay attention to detail to ensure high-quality results.
+            </p>
+            <ul>
+                <li><a href="https://bulldogjob.pl/readme/zbieranie-metryk-dotnet-prometheus" target="_blank"
+                        rel="noopener noreferrer">“Metrics collection in .NET using Prometheus” publication</a></li>
+                <li><a href="https://youtu.be/6XlFrWRt_aQ" target="_blank" rel="noopener noreferrer">“Possibilities of
+                        ChatGPT on example of the .NET platform” presentation</a></li>
+                <li>Presenting “Coupling &amp; Cohesion” topic on the online conference</li>
+            </ul>
         </div>
 
         <div class="section">
             <h3>Skills</h3>
             <ul>
-                <li><strong>Backend:</strong> .NET, C#, Visual Basic, Web API, ADO.NET, Dapper, Entity Framework</li>
-                <li><strong>Frontend:</strong> Angular 6+, TypeScript, JavaScript (jQuery)</li>
-                <li><strong>Databases:</strong> MS SQL, PostgreSQL, MongoDB, Elasticsearch</li>
-                <li><strong>Cloud and DevOps:</strong> Azure Functions, Azure DevOps (CI/CD), Docker, Azure Service Bus
+                <li><strong><i class="fas fa-server icon-backend"></i> Backend:</strong> .NET, C#, Visual Basic, Web
+                    API,
+                    ADO.NET, Dapper, Entity Framework</li>
+                <li><strong><i class="fas fa-desktop icon-frontend"></i> Frontend:</strong> Angular 6+, TypeScript,
+                    JavaScript (jQuery)</li>
+                <li><strong><i class="fas fa-database icon-database"></i> Databases:</strong> MS SQL, PostgreSQL,
+                    MongoDB, Elasticsearch</li>
+                <li><strong><i class="fas fa-cloud icon-cloud"></i> Cloud and DevOps:</strong> Azure Functions, Azure
+                    DevOps (CI/CD), Docker, Azure Service Bus, and other Azure Services</li>
+                <li><strong><i class="fas fa-cubes icon-design"></i> Design:</strong> DDD, TDD, SOLID, Clean Code,
+                    Modular Monolith, Microservices</li>
+                <li><strong><i class="fas fa-tools icon-tools"></i> Tools:</strong> Git, Kibana, Grafana, Prometheus
                 </li>
-                <li><strong>Design:</strong> DDD, TDD, SOLID, Clean Code, Modular Monolith, Microservices</li>
-                <li><strong>Tools:</strong> Git, Kibana, Grafana, Prometheus</li>
-                <li><strong>Other:</strong> Python, Test Automation, API documentation, Trunk-based development</li>
+                <li><strong><i class="fas fa-code icon-other"></i> Other:</strong> Python, Test Automation, API
+                    documentation, Trunk-based development</li>
             </ul>
         </div>
 
@@ -204,54 +292,84 @@
             <h3>Projects</h3>
             <ul class="projects">
                 <li>
-                    <div class="project-title">Internal Payment System Integration</div>
-                    <div>Integration of the company's internal payment system with various third-party payment
-                        providers.</div>
-                    <div class="project-tech">Technologies: .NET, REST APIs, Azure Service Bus, Docker</div>
+                    <div class="project-title">High Risk Event Monitoring System</div>
+                    <div>
+                        Developed a monitoring system for tracking high-risk user activities on company machines,
+                        including virtual machines and servers. The system collects and analyzes events to identify
+                        potential security threats and unauthorized actions.
+                        Utilized .NET 4.8 and .NET 8 for backend development, Angular versions 12 and 19 for frontend,
+                        and MS SQL for data storage. Managed CI/CD pipelines using Azure DevOps to ensure smooth and
+                        reliable deployments.
+                    </div>
+                    <div class="project-tech">Technologies: .NET 4.8, .NET 8, Angular 12 &amp; 19, Azure DevOps (CI/CD),
+                        MS SQL</div>
                 </li>
+
+
+                <li>
+                    <div class="project-title">Internal Payment System</div>
+                    <div>
+                        Worked in a Scrum team responsible for the Wallet system used by players betting on sports
+                        results at a leading international gaming and betting company. As a fullstack developer, I
+                        worked with Microsoft Dynamics for financial operations and user account management. The work
+                        involved integrating external payment systems with our Wallet to enable customers to deposit and
+                        withdraw funds using various payment providers and multiple payment methods. Additionally, I
+                        integrated with a third-party online customer registration tool that handled ID submission and
+                        facial recognition to prevent illegal registrations. I also conducted internal team training on
+                        writing unit tests.
+                    </div>
+                    <div class="project-tech">Technologies: .NET Core, REST APIs, Angular, Microsoft Dynamics</div>
+                </li>
+
+
+
+                <li>
+                    <div class="project-title">Integration system for SSP providers</div>
+                    <div>
+                        The company helps marketers and media owners achieve their goals through the world's
+                        leading Commerce Media Platform. Responsible for integration
+                        between various Supply-Side Platforms, delivering highly performant solutions with strict
+                        industry requirements — auction response times below 80ms. Extending metrics collection
+                        solutions for a global adtech company operating worldwide.
+                        Worked primarily in a Kanban-based process with Scrum elements.
+                        Utilized gRPC and Google Protobuf for .NET, along with advanced monitoring tools including
+                        Prometheus, Grafana, and Elasticsearch. Actively participated in post-mortem meetings to
+                        continuously improve system reliability.
+                    </div>
+                    <div class="project-tech">Technologies: .NET Core, Python, gRPC, Google Protobuf, Prometheus,
+                        Grafana, Elasticsearch, Trunk-based development</div>
+                </li>
+
                 <li>
                     <div class="project-title">E-commerce Platform Development</div>
-                    <div>Development and maintenance of a large-scale e-commerce platform with focus on scalability and
-                        modularization.</div>
-                    <div class="project-tech">Technologies: .NET, PostgreSQL, Elasticsearch, Angular</div>
+                    <div>
+                        Contributed to the development and maintenance of a large-scale e-commerce platform for a
+                        leading Polish e-commerce company. Worked as part of a Scrum team with full adherence to Agile
+                        principles, focusing on the backend of the shop management system. Responsibilities included
+                        implementing and maintaining REST APIs, designing and optimizing database queries and
+                        procedures, ensuring seamless integration with Azure Service Bus for reliable messaging, and
+                        implementing customer newsletter registration via Salesforce integration. Took initiative in
+                        refactoring the legacy monolithic application towards a modular monolith architecture, improving
+                        maintainability and scalability. Initiated and facilitated regular technical meetings within the
+                        team, where we discussed architectural decisions, shared technical solutions, and exchanged
+                        knowledge. Collaborated closely with the frontend team to deliver high-quality solutions.
+                    </div>
+                    <div class="project-tech">Technologies: .NET Core, C#, MongoDB, Azure Service Bus, REST APIs,
+                        Salesforce,
+                        Modular Monolith, Scrum</div>
                 </li>
                 <li>
-                    <div class="project-title">Metrics Collection System</div>
-                    <div>Implemented metrics collection in .NET applications using Prometheus for monitoring performance
-                        and
-                        health.</div>
-                    <div class="project-tech">Technologies: .NET, Prometheus, Grafana</div>
+                    <div class="project-title">Employee Certification System</div>
+                    <div>
+                        Maintained and enhanced a certification system application within a Scrum team. Developed and
+                        ran automated tests using Selenium and Cypress, as well as unit tests. Provided 2-nd and 3-rd
+                        line support by investigating and fixing production issues. Participated in refactoring and
+                        migrating the frontend from WebForms to Angular. Worked with MS SQL databases, including
+                        developing and fixing stored procedures. Completed Agile training during the project.
+                    </div>
+                    <div class="project-tech">Technologies: .NET, Visual Basic, MS SQL, Angular, WebForms, Selenium,
+                        Cypress, Unit Testing, Scrum, Agile, Azure Cloud</div>
                 </li>
-                <li>
-                    <div class="project-title">ChatGPT Possibilities Presentation</div>
-                    <div>Prepared and presented a talk about integrating ChatGPT with the .NET platform.</div>
-                    <div class="project-tech">Technologies: .NET, AI, Presentation Tools</div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h3>Publications and Talks</h3>
-            <ul>
-                <li>Presented the topic <em>“ChatGPT Possibilities Presentation”</em> at an online conference.</li>
-                <li>Published the article <em>“Metrics collection in .NET using Prometheus”</em> on bulldogjob.pl.</li>
-                <li>Presented the topic <em>“Coupling & Cohesion”</em> at an online conference.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h3>Education</h3>
-            <p>Cracow University of Technology, Master of Science (Transport), 10.2011 – 06.2016</p>
-        </div>
-
-        <div class="section">
-            <h3>Courses and Certifications</h3>
-            <ul>
-                <li>AZ-204: Implement Azure Functions</li>
-                <li>Domain-Driven Design Fundamentals (Pluralsight)</li>
-                <li>Learn Rust by Building Real Applications (Udemy)</li>
-                <li>Building and Running Your First Docker App (Pluralsight)</li>
-                <li>Unit Testing in Angular 12 (Pluralsight)</li>
             </ul>
         </div>
     </div>
