@@ -253,7 +253,7 @@
                         rel="noopener noreferrer">“Metrics collection in .NET using Prometheus” publication</a></li>
                 <li><a href="https://youtu.be/6XlFrWRt_aQ" target="_blank" rel="noopener noreferrer">“Possibilities of
                         ChatGPT on example of the .NET platform” presentation</a></li>
-                <li>Presenting “Coupling &amp; Cohesion” topic on the online conference</li>
+                <li>“Coupling &amp; Cohesion” presentation on the online conference</li>
             </ul>
         </div>
 
@@ -282,7 +282,7 @@
             <h3>Work Experience</h3>
             <ul>
                 <li><strong>Alten</strong> (10.2024 – present)</li>
-                <li><strong>Intellias</strong> (09.2022 – 09.2024)</li>
+                <li><strong>Intellias</strong> (08.2021 – 09.2024)</li>
                 <li><strong>x-kom</strong> (09.2020 – 07.2021)</li>
                 <li><strong>Mindbox</strong> (08.2018 – 08.2020)</li>
             </ul>
@@ -294,12 +294,25 @@
                 <li>
                     <div class="project-title">High Risk Event Monitoring System</div>
                     <div>
-                        Developed a monitoring system for tracking high-risk user activities on company machines,
-                        including virtual machines and servers. The system collects and analyzes events to identify
-                        potential security threats and unauthorized actions.
+                        Developed a monitoring system for tracking high-risk user activities on company machines.
+                        The system collects and analyzes events to identify potential security threats and unauthorized
+                        actions.
+                        It processes a large volume of detailed logs, including individual commands executed on company
+                        machines, which are correlated and aggregated into user activity sessions to provide contextual
+                        insights into behavior.
+                        The logs are continuously analyzed from a security perspective, using built-in detection logic
+                        to automatically identify potentially dangerous actions, significantly reducing noise and
+                        enabling faster incident response.
+                        The system ingests data from multiple sources across the organization, including cloud services,
+                        internal applications, and databases, enabling a unified view of activity and risk.
                         Utilized .NET 4.8 and .NET 8 for backend development, Angular versions 12 and 19 for frontend,
-                        and MS SQL for data storage. Managed CI/CD pipelines using Azure DevOps to ensure smooth and
-                        reliable deployments.
+                        and MS SQL for data storage.
+
+                        Significantly contributed to the project by automating CI/CD pipelines for all environments,
+                        including production, using Azure DevOps.
+                        The deployment process was enhanced with integration of unit tests and HTML reports for code
+                        coverage, improving transparency and code quality tracking.
+
                     </div>
                     <div class="project-tech">Technologies: .NET 4.8, .NET 8, Angular 12 &amp; 19, Azure DevOps (CI/CD),
                         MS SQL</div>
@@ -326,15 +339,17 @@
                 <li>
                     <div class="project-title">Integration system for SSP providers</div>
                     <div>
-                        The company helps marketers and media owners achieve their goals through the world's
-                        leading Commerce Media Platform. Responsible for integration
-                        between various Supply-Side Platforms, delivering highly performant solutions with strict
-                        industry requirements — auction response times below 80ms. Extending metrics collection
-                        solutions for a global adtech company operating worldwide.
-                        Worked primarily in a Kanban-based process with Scrum elements.
-                        Utilized gRPC and Google Protobuf for .NET, along with advanced monitoring tools including
-                        Prometheus, Grafana, and Elasticsearch. Actively participated in post-mortem meetings to
-                        continuously improve system reliability.
+                        The company helps marketers and media owners achieve their goals through the world's leading
+                        Commerce Media Platform. Responsible for integration between various Supply-Side Platforms,
+                        delivering highly performant solutions with strict industry requirements — auction response
+                        times below 80ms. Extending metrics collection solutions for a global adtech company operating
+                        worldwide. Worked primarily in a Kanban-based process with Scrum elements. Utilized gRPC and
+                        Google Protobuf for .NET, along with advanced monitoring tools including Prometheus, Grafana,
+                        and Elasticsearch. Actively participated in post-mortem meetings to continuously improve system
+                        reliability.
+                        Additionally, regularly prepared and delivered tech talks to share knowledge with team members
+                        as part of internal engineering culture.
+
                     </div>
                     <div class="project-tech">Technologies: .NET Core, Python, gRPC, Google Protobuf, Prometheus,
                         Grafana, Elasticsearch, Trunk-based development</div>
