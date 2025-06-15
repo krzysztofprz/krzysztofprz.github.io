@@ -196,7 +196,6 @@ ul.projects>li {
     .right-column {
         max-width: 100%;
         order: 1;
-        /* Zmiana: wyświetl na górze */
     }
 
     .languages img {
