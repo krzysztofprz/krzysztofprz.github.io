@@ -6,6 +6,7 @@
 body {
     background: linear-gradient(135deg, #f8f8f8 0%, #dcdcdc 100%);
     font-family: 'Lato', Arial, sans-serif;
+    font-weight: 500;
     line-height: 1.6;
     max-width: 1000px;
     margin: 40px auto;
@@ -88,6 +89,10 @@ body {
     color: #8e44ad;
 }
 
+.fa-robot {
+    color:#494949;
+}
+
 .right-column {
     flex: 1;
     max-width: 700px;
@@ -158,6 +163,14 @@ ul.projects>li {
 
 .icon-other {
     color: #34495e;
+}
+
+.icon-robot {
+    color: #494949;
+}
+
+.mr {
+    margin-right: 1%;
 }
 
 .languages img {
